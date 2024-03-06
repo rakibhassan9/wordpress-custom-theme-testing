@@ -60,8 +60,8 @@
                 <?php
                 the_posts_pagination( array(
                     "screen_reader_text" => ' ',
-                    "prev_text"          => "New Posts",
-                    "next_text"          => "Old Posts"
+                    "prev_text"          => "New Post",
+                    "next_text"          => "Old Postss"
                 ) );
                 ?>
             </div>
