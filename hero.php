@@ -2,25 +2,23 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="tagline">
-                    <?php bloginfo( "description" ); ?>
-                </h3>
+                <h3 class="tagline"><?php bloginfo("description"); ?></h3>
                 <h1 class="align-self-center display-1 text-center heading">
-                    <a href="<?php echo site_url(); ?>"><?php bloginfo( "name" ); ?></a>
+                    <a href="<?php echo site_url(); ?>"><?php bloginfo("title") ?></a>
                 </h1>
             </div>
             <div class="col-md-12">
-                <div class="navigation">
-                    <?php
-                    wp_nav_menu(
+                <?php 
+                    wp_nav_menu( 
                         array(
                             'theme_location' => 'topmenu',
                             'menu_id'        => 'topmenucontainer',
                             'menu_class'     => 'list-inline text-center',
-                        )
-                    );
-                    ?>
-                </div>
+                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'echo' => true,
+                        ));
+                
+                ?>
             </div>
         </div>
     </div>
